@@ -13,6 +13,7 @@ enum CategoryModel: Hashable {
     enum Section: Int, CaseIterable {
         case work
         case education
+        case news
     }
     
     struct Filter: Hashable {

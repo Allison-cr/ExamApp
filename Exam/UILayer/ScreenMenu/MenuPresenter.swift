@@ -22,8 +22,9 @@ final class MenuPresenter: IMenuPresenter {
     
     func loadData() {
         let work = MokData().categoryWorkModel()
-        let filter = MokData().categoryFreeModel()
-        viewController?.viewReady(work: work, free: filter)
+        let education = MokData().categoryEducationModel()
+        let news = MokData().categoryNewsModel()
+        viewController?.viewReady(work: work, education: education, news: news )
     }
     func tupButtonAdd() {
         clouser?()

@@ -47,6 +47,7 @@ private extension MenuViewCell {
     func settingImageView() -> UIImageView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .white
         contentView.addSubview(imageView)
         return imageView
     }
@@ -57,13 +58,12 @@ private extension MenuViewCell {
             make.top.equalToSuperview().offset(10)
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-10)
-            make.height.equalTo(30)
+            make.height.equalTo(60)
         }
         
         label.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().offset(-10)
+            make.top.equalTo(imageView.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
         }
         
         

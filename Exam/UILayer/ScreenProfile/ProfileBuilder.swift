@@ -10,7 +10,8 @@ import Foundation
 final class ProfileBuilder {
     func assembly() -> ProfileViewController {
         let viewController = ProfileViewController()
-        let presenter = ProfilePresenter()
+        let productService = ProductService()
+        let presenter = ProfilePresenter(view: viewController, productService: productService)
         viewController.presenter = presenter
         return viewController
     }

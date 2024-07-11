@@ -1,31 +1,38 @@
 import UIKit
+
 class MokData {
     func categoryWorkModel() -> [CategoryModel.Card] {
         [
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Задачи", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 ),
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Проекты", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 ),
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Команда", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 ),
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Мероприятия", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 ),
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Тех долг", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 ),
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Образование", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 ),
             CategoryModel.Card(
-                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                name: "Встречи", image: UIImage(systemName: "folder.fill") ?? UIImage()
+                ),
+            CategoryModel.Card(
+                name: "Новое", image: UIImage(systemName: "folder.fill") ?? UIImage()
+                ),
+            CategoryModel.Card(
+                name: "Настройки", image: UIImage(systemName: "folder.fill") ?? UIImage()
                 )
         ]
     }
-    func categoryFreeModel() -> [CategoryModel.Card] {
+    func categoryEducationModel() -> [CategoryModel.Card] {
         [
             CategoryModel.Card(
                 name: "2", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
@@ -50,4 +57,31 @@ class MokData {
                 )
         ]
     }
+    
+    
+    func categoryNewsModel() -> [CategoryModel.Card] {
+        [
+            CategoryModel.Card(
+                name: "1", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                ),
+            CategoryModel.Card(
+                name: "2", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                ),
+            CategoryModel.Card(
+                name: "3", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                ),
+            CategoryModel.Card(
+                name: "4", image: UIImage(systemName: "square.and.pencil") ?? UIImage()
+                )
+        ]
+    }
+    
+    func bannerNewsModel() -> [UIImage?] {
+           return [
+               UIImage(named: "image1"),
+               UIImage(named: "image2"),
+               UIImage(named: "image3")
+           ]
+       }
+
 }

@@ -42,6 +42,11 @@
 		FEFB72852C3D9829006552C1 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72842C3D9829006552C1 /* ProductCollectionViewCell.swift */; };
 		FEFB72882C3D9945006552C1 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72872C3D9945006552C1 /* ProductModel.swift */; };
 		FEFB728B2C3DA4B2006552C1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FEFB728A2C3DA4B2006552C1 /* Kingfisher */; };
+		FEFB728E2C416F9E006552C1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB728D2C416F9E006552C1 /* DetailViewController.swift */; };
+		FEFB72902C418EF1006552C1 /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB728F2C418EF1006552C1 /* TESTViewController.swift */; };
+		FEFB72922C42B8DB006552C1 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72912C42B8DB006552C1 /* DetailBuilder.swift */; };
+		FEFB72942C43FE40006552C1 /* Margins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72932C43FE40006552C1 /* Margins.swift */; };
+		FEFB72962C440568006552C1 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72952C440568006552C1 /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		FEFB72732C3D8038006552C1 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		FEFB72842C3D9829006552C1 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		FEFB72872C3D9945006552C1 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		FEFB728D2C416F9E006552C1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FEFB728F2C418EF1006552C1 /* TESTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
+		FEFB72912C42B8DB006552C1 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
+		FEFB72932C43FE40006552C1 /* Margins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margins.swift; sourceTree = "<group>"; };
+		FEFB72952C440568006552C1 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,7 @@
 				FEB7C4AD2C34A3AC003FD6CB /* Resourses */,
 				FEB7C4742C343050003FD6CB /* LaunchScreen.storyboard */,
 				FEB7C4772C343050003FD6CB /* Info.plist */,
+				FEFB728F2C418EF1006552C1 /* TESTViewController.swift */,
 			);
 			path = Exam;
 			sourceTree = "<group>";
@@ -163,10 +174,10 @@
 		FEB7C48E2C343709003FD6CB /* ScreenProfile */ = {
 			isa = PBXGroup;
 			children = (
+				FEFB72862C3D9832006552C1 /* Cell */,
 				FEB7C48F2C34381F003FD6CB /* ProfileViewController.swift */,
 				FEB7C4912C343827003FD6CB /* ProfileBuilder.swift */,
 				FEB7C4932C343831003FD6CB /* ProfilePresenter.swift */,
-				FEFB72862C3D9832006552C1 /* Cell */,
 				FEFB72872C3D9945006552C1 /* ProductModel.swift */,
 			);
 			path = ScreenProfile;
@@ -186,6 +197,7 @@
 			children = (
 				FEB7C49C2C343CED003FD6CB /* MokData.swift */,
 				FEB7C4A92C3447CE003FD6CB /* Typealias.swift */,
+				FEFB72932C43FE40006552C1 /* Margins.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -227,6 +239,7 @@
 		FEFB72802C3D86EC006552C1 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				FEFB728C2C416F86006552C1 /* ScreenDetail */,
 				FEB7C48E2C343709003FD6CB /* ScreenProfile */,
 				FEB7C48D2C3436FB003FD6CB /* ScreenMenu */,
 			);
@@ -248,6 +261,16 @@
 				FEFB72842C3D9829006552C1 /* ProductCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FEFB728C2C416F86006552C1 /* ScreenDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB728D2C416F9E006552C1 /* DetailViewController.swift */,
+				FEFB72912C42B8DB006552C1 /* DetailBuilder.swift */,
+				FEFB72952C440568006552C1 /* DetailPresenter.swift */,
+			);
+			path = ScreenDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +358,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFB72922C42B8DB006552C1 /* DetailBuilder.swift in Sources */,
 				FEFB72882C3D9945006552C1 /* ProductModel.swift in Sources */,
+				FEFB72902C418EF1006552C1 /* TESTViewController.swift in Sources */,
+				FEFB72942C43FE40006552C1 /* Margins.swift in Sources */,
 				FEB7C47F2C343219003FD6CB /* BaseCoordinator .swift in Sources */,
 				FEB7C4852C3433A6003FD6CB /* ProfileCoordinator.swift in Sources */,
 				FEB7C4882C3433D4003FD6CB /* TabBarController.swift in Sources */,
@@ -348,12 +374,14 @@
 				FEB7C4B22C3AF3E9003FD6CB /* BannersViewModel.swift in Sources */,
 				FEB7C4B02C36DFE8003FD6CB /* BannersView.swift in Sources */,
 				FEB7C4922C343827003FD6CB /* ProfileBuilder.swift in Sources */,
+				FEFB728E2C416F9E006552C1 /* DetailViewController.swift in Sources */,
 				FEB7C4AC2C345007003FD6CB /* TitleSupplementaryView.swift in Sources */,
 				FEB7C4A82C344440003FD6CB /* Model.swift in Sources */,
 				FEB7C48A2C3433F5003FD6CB /* TabBarPage.swift in Sources */,
 				FEB7C49D2C343CED003FD6CB /* MokData.swift in Sources */,
 				FEB7C4AA2C3447CE003FD6CB /* Typealias.swift in Sources */,
 				FEB7C48C2C3436D3003FD6CB /* MenuCoordinator.swift in Sources */,
+				FEFB72962C440568006552C1 /* DetailPresenter.swift in Sources */,
 				FEB7C46A2C34304E003FD6CB /* AppDelegate.swift in Sources */,
 				FEB7C4982C3438B8003FD6CB /* MenuBuilder.swift in Sources */,
 				FEB7C46C2C34304E003FD6CB /* SceneDelegate.swift in Sources */,

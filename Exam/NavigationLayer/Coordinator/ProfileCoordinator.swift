@@ -21,8 +21,15 @@ final class ProfileCoordinator: ICoordinator {
     
     func runMenuFlow() {
         let viewController = ProfileBuilder().assembly()
+        viewController.presenter?.coordinator = self
         navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(viewController, animated: true)
     }
-    
+
+    func showDetail(for product: ProductModel.Product) {
+        let detailViewController = DetailBuilder().assembly(product: product)
+        navigationController.isNavigationBarHidden = true
+
+        navigationController.pushViewController(detailViewController, animated: true)
+    }
 }

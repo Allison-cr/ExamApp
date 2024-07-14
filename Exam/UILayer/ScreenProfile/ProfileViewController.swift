@@ -49,6 +49,10 @@ extension ProfileViewController:  UICollectionViewDelegate {
             lastContentOffset = offsetY
         }
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProduct = modelProduct[indexPath.item]
+        presenter?.showDetail(for: selectedProduct)
+    }
 }
 
 

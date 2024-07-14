@@ -9,13 +9,16 @@ import Foundation
 import RxSwift
 
 protocol IProfilePresenter: AnyObject {
+    var coordinator: ProfileCoordinator? { get set }
     func loadInitialData()
     func loadNextPage()
+    func showDetail(for product: ProductModel.Product)
 }
 
 class ProfilePresenter: IProfilePresenter {
-
+    
     // MARK: - Properties
+    var coordinator: ProfileCoordinator?
     weak var view: IProfileViewController?
     private var productService: ProductService
     private var disposeBag = DisposeBag()
@@ -47,7 +50,7 @@ class ProfilePresenter: IProfilePresenter {
     private func loadProducts(page: Int, completion: @escaping ([ProductModel.Product]) -> Void) {
         let limit = page * pageSize
         let offset = (page-1) * pageSize
-      //  print(" \(limit) \(offset) ")
+        //  print(" \(limit) \(offset) ")
         productService.fetchProducts(limit: limit, offset: offset)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { products in
@@ -57,4 +60,9 @@ class ProfilePresenter: IProfilePresenter {
             })
             .disposed(by: disposeBag)
     }
+    
+    // MARK: - Detail View
+    func showDetail(for product: ProductModel.Product) {
+           coordinator?.showDetail(for: product)
+       }
 }
